@@ -22,7 +22,7 @@ void createaccount(){
 			}
 		}
 		if(g.length()>12){
-			cout<<"username too long";
+			cout<<"username too long\n";
 			c=false;
 			break;
 		}
@@ -90,11 +90,12 @@ int main(){
 			if(loggedin){
 				game();
 			}else{
-				cout<<"You Need to log in";
+				cout<<"You Need to log in\n";
 			}
 		}else if(l=="4"){
 			cout<<"Umm...\nThere is no option 4 \nWhat should I do?\nI know!\nShutting down\n\n";
 			break;
 		};
+		cout<<"Enter 1, 2, or 3 ";
 	};
 };
