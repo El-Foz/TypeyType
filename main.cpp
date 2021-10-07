@@ -16,7 +16,7 @@ void createaccount(){
 	while(getline(gabrieliscool, g)){
 		for(int p=0; p<end(forbid)-begin(forbid); p++){
 			if(!(g.find(forbid[p])<1844674407370955161)){
-				cout<<"Cannot contain specific characters";
+				cout<<"Cannot contain specific characters or ";
 				c=false;
 				break;
 			}
@@ -39,6 +39,7 @@ void createaccount(){
   	createaccount.close();
   	cout << "Account created!" << endl;	
 		user=username;	
+		loggedin=true;
 	}
 };
 void verifyAccount(){
@@ -59,23 +60,23 @@ void verifyAccount(){
 	};
 };
 void game(){
-	string i;
-	cout<<"type in 10 and then press enter> ";
-	cin>>i;
-	if(i=="10"){
-		cout<<"you win\n";
-	}else if(i=="kyrus" || i=="Kyrus"){
-		cout<<"you super lose\n";
-	}else if(i=="winston" || i=="Winston"){
-		cout<<"\n | \n | \nO O\n";
-	}else if(i=="teddy"||i=="Teddy"){
-		cout<<"\n*floogles*\n";
-  }else if(i=="2147483647"){
-		cout<<"\nWarning: 32-bit integer limit has been reached. Shutting down\n";
-	}else{
-		cout<<"you lose\n";
-	};
-}
+;;string i;
+;;cout<<"type in 10 and then press enter> ";
+;;cin>>i;
+;;if(i=="10"){
+;;;;cout<<"you win\n";
+;;}else if(i=="kyrus" || i=="Kyrus"){
+;;;;cout<<"you super lose\n";
+;;}else if(i=="winston" || i=="Winston"){
+;;;;cout<<"\n | \n | \nO O\n";
+;;}else if(i=="teddy"||i=="Teddy"){
+;;;;cout<<"\n*floogles*\n";
+;;}else if(i=="2147483647"){
+;;;;cout<<"\nWarning: 32-bit integer limit has been ;;;;reached. Shutting down\n";
+;;}else{
+;;;;cout<<"you lose\n";
+;;};
+};
 int main(){
 	int l;
 	cout<<"Do you want to:\n1) Create an Account \n2) Log in\n3) Play The Game\n4) Mystery option\nIf you do Not enter one, it will quit for you\n";
@@ -93,8 +94,6 @@ int main(){
 			}
 		}else if(l==4){
 			cout<<"Umm...\nThere is no option 4 \nWhat should I do?\nI know!\nShutting down\n\n";
-			break;
-		}else{
 			break;
 		}
 		cout<<"\nwhat do you want to do? 1, 2, 3, or 4? ";
