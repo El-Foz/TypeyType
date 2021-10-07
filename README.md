@@ -33,6 +33,10 @@ Added Teddy easter egg
 
 Basic accounts and a copletely revamped system, however they do not do anything, as well as a new easter egg
 
-### 3.0.0.1
+### 3.0.0.1 Beta
 
 Just fixed a little bug where things would break if you typed something else
+
+### 3.0.0 Release
+
+Accounts now work. You need an account to log in

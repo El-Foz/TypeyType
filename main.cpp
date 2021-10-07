@@ -2,20 +2,27 @@
 #include <string>
 #include <fstream>
 using namespace std;
-
-int score;
 string user;
+bool loggedin=false;
 void createaccount(){
 	string username;
 	string g;
 	bool c=true;
 	ifstream gabrieliscool;
-	cout<<"Create a username (Please keep in mind that anyone can view this on github and replit)> ";
+	cout<<"Create a username. Must be under 12 characters (Please keep in mind that anyone can view this on github and replit)> ";
 	cin>>username;
 	gabrieliscool.open("accounts.txt");
+	string forbid[]={"(", " ", ")", "[", "]", "{", "}",  "!", "@", "#", "$", "%", "^", "&", "*", "`", "~", "\"", "," "'", "+", "/", "\\", "|", "<", ">", "?", "."};
 	while(getline(gabrieliscool, g)){
-		if(g.find(" ")<=1844674407370955161){
-			cout<<"No spaces allowed";
+		for(int p=0; p<end(forbid)-begin(forbid); p++){
+			if(!(g.find(forbid[p])<1844674407370955161)){
+				cout<<"Cannot contain specific characters";
+				c=false;
+				break;
+			}
+		}
+		if(g.length()>12){
+			cout<<"username too long";
 			c=false;
 			break;
 		}
@@ -30,10 +37,12 @@ void createaccount(){
   	createaccount.open("accounts.txt", ios::app);
   	createaccount << username << endl;
   	createaccount.close();
-  	cout << "Account created!" << endl;		
+  	cout << "Account created!" << endl;	
+		user=username;	
 	}
 };
 void verifyAccount(){
+	loggedin=false;
 	ifstream accounts;
 	accounts.open("accounts.txt");
 	string g;
@@ -42,9 +51,10 @@ void verifyAccount(){
 		cout<<"what is your username? ";
 		cin>>check;
 		if(check==g){
-			cout<<"Username correct\n\n";
+			cout<<"Username correct\n";
+			loggedin=true;
 		}else{
-			cout<<"Username incorrect\n\n";
+			cout<<"Username incorrect\n";
 		};
 	};
 };
@@ -68,7 +78,6 @@ void game(){
 }
 int main(){
 	int l;
-	
 	cout<<"Do you want to:\n1) Create an Account \n2) Log in\n3) Play The Game\n4) Mystery option\nIf you do Not enter one, it will quit for you\n";
 	while(true){
 		cin>>l;
@@ -77,7 +86,11 @@ int main(){
 		}else if(l==2){
 			verifyAccount();
 		}else if(l==3){
-			game();
+			if(loggedin){
+				game();
+			}else{
+				cout<<"You Need to log in";
+			}
 		}else if(l==4){
 			cout<<"Umm...\nThere is no option 4 \nWhat should I do?\nI know!\nShutting down\n\n";
 			break;
