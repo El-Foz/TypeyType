@@ -32,3 +32,7 @@ Added Teddy easter egg
 ### Update 3.0.0 Beta
 
 Basic accounts and a copletely revamped system, however they do not do anything, as well as a new easter egg
+
+### 3.0.0.1
+
+Just fixed a little bug where things would break if you typed something else

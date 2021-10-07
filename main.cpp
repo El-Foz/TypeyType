@@ -14,6 +14,9 @@ void createaccount(){
 	cin>>username;
 	gabrieliscool.open("accounts.txt");
 	while(getline(gabrieliscool, g)){
+		if(g.find(" ")<=1844674407370955161){
+			cout<<"No spaces allowed";
+		}
 		if(username==g){
 			cout<<"Username Taken\n";
 			c=false;
@@ -62,23 +65,23 @@ void game(){
 	};
 }
 int main(){
-	int i;
-	cout<<"Do you want to:\n1) Create an Account \n2) Log in\n3) Play The Game\n4) Mystery option\n";
+	int l;
+	
+	cout<<"Do you want to:\n1) Create an Account \n2) Log in\n3) Play The Game\n4) Mystery option\nIf you do Not enter one, it will quit for you\n";
 	while(true){
-		cin>>i;
-		if(i==1){
+		cin>>l;
+		if(l==1){
 			createaccount();
-		}else if(i==2){
+		}else if(l==2){
 			verifyAccount();
-		}else if(i==3){
+		}else if(l==3){
 			game();
-		}else if(i==4){
+		}else if(l==4){
 			cout<<"Umm...\nThere is no option 4 \nWhat should I do?\nI know!\nShutting down\n\n";
 			break;
 		}else{
-			cout<<"You have broken a sacred trust between user and computer. You shall now die\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-			
+			break;
 		}
-		cout<<"what do you want to do? 1, 2, 3, or 4? ";
+		cout<<"\nwhat do you want to do? 1, 2, 3, or 4? ";
 	}
 };
