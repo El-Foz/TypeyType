@@ -1,5 +1,5 @@
-# Changelog:
-## TypeyType
+# TypeyType
+## Changelog:
 
 ### Update 1.0
 
@@ -28,3 +28,7 @@ Added Winston easter egg
 ### Update 2.0.4
 
 Added Teddy easter egg
+
+### Update 3.0.0 Beta
+
+Basic accounts and a copletely revamped system, however they do not do anything, as well as a new easter egg
