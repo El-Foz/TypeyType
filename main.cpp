@@ -16,6 +16,8 @@ void createaccount(){
 	while(getline(gabrieliscool, g)){
 		if(g.find(" ")<=1844674407370955161){
 			cout<<"No spaces allowed";
+			c=false;
+			break;
 		}
 		if(username==g){
 			cout<<"Username Taken\n";
