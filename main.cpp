@@ -72,30 +72,29 @@ void game(){
 ;;}else if(i=="teddy"||i=="Teddy"){
 ;;;;cout<<"\n*floogles*\n";
 ;;}else if(i=="2147483647"){
-;;;;cout<<"\nWarning: 32-bit integer limit has been ;;;;reached. Shutting down\n";
+;;;;cout<<"\nWarning: 32-bit integer limit has been reached. Shutting down\n";
 ;;}else{
 ;;;;cout<<"you lose\n";
 ;;};
 };
 int main(){
-	int l;
-	cout<<"Do you want to:\n1) Create an Account \n2) Log in\n3) Play The Game\n4) Mystery option\nIf you do Not enter one, it will quit for you\n";
+	string l;
+	cout<<"Do you want to:\n1) Create an Account \n2) Log in\n3) Play The Game\n4) Mystery option\n";
 	while(true){
 		cin>>l;
-		if(l==1){
+		if(l=="1"){
 			createaccount();
-		}else if(l==2){
+		}else if(l=="2"){
 			verifyAccount();
-		}else if(l==3){
+		}else if(l=="3"){
 			if(loggedin){
 				game();
 			}else{
 				cout<<"You Need to log in";
 			}
-		}else if(l==4){
+		}else if(l=="4"){
 			cout<<"Umm...\nThere is no option 4 \nWhat should I do?\nI know!\nShutting down\n\n";
 			break;
-		}
-		cout<<"\nwhat do you want to do? 1, 2, 3, or 4? ";
-	}
+		};
+	};
 };

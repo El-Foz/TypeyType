@@ -41,6 +41,10 @@ Just fixed a little bug where things would break if you typed something else
 
 Accounts now work. You need an account to log in
 
-### 3.0.0.1 Fixed an older fix with another fix
+### 3.0.0.1
 
 I made the old function better
+
+### 3.0.0.2
+
+Made something into a string to fix a bug
