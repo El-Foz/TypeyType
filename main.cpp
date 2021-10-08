@@ -12,15 +12,12 @@ void createaccount(){
 	cout<<"Create a username. Must be under 12 characters (Please keep in mind that anyone can view this on github and replit)> ";
 	cin>>username;
 	gabrieliscool.open("accounts.txt");
-	string forbid[]={"(", " ", ")", "[", "]", "{", "}",  "!", "@", "#", "$", "%", "^", "&", "*", "`", "~", "\"", "," "'", "+", "/", "\\", "|", "<", ">", "?", "."};
+	
 	while(getline(gabrieliscool, g)){
-		for(int p=0; p<end(forbid)-begin(forbid); p++){
-			if(!(g.find(forbid[p])<1844674407370955161)){
-				cout<<"Cannot contain specific characters or ";
-				c=false;
-				break;
-			}
+		if(g.find(" ")<1844674407370955161){
+			cout<<"username cannot contain spaces";
 		}
+		
 		if(g.length()>12){
 			cout<<"username too long\n";
 			c=false;
